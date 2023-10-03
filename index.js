@@ -1,4 +1,5 @@
 // Write your solution in this file!
+/*
 const employee = {
     name: 'Sam',
 }
@@ -29,6 +30,38 @@ function deleteFromEmployeeByKey(updateEmployee){
 }
 
 function destructivelyDeleteFromEmployeeByKey(newEmployee){
+    delete employee.name;
+    return employee;
+}
+*/
+
+const employee = {
+    name: 'Sam',
+}
+
+function updateEmployeeWithKeyAndValue(obj, key, value){
+    const updateEmployee = {
+        ...employee,
+        streetAddress: '11 Broadway'
+    };
+    return updateEmployee;
+}
+
+function destructivelyUpdateEmployeeWithKeyAndValue(obj, key, value){
+    employee.streetAddress = '12 Broadway';
+    return employee;
+}
+
+function deleteFromEmployeeByKey (obj, key) {
+    const newEmployee = {
+        ...employee,
+    }
+
+    delete newEmployee.name;
+    return newEmployee;
+}
+
+function destructivelyDeleteFromEmployeeByKey (obj, key) {
     delete employee.name;
     return employee;
 }
